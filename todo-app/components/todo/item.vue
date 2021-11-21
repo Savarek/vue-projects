@@ -2,22 +2,29 @@
   <li class="item">
     <h1
       class="item-title"
-      :class="{ completed: completed }"
-      @click="completed = !completed"
+      :class="{ completed: item.completed }"
+      @click="changeCompleteById(item.id)"
     >
-      {{ title }}
+      {{ item.title }}
     </h1>
-    <button class="item-delete">Delete</button>
+    <button class="item-delete" @click="onItemDelete(item.id)">Delete</button>
   </li>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
 export default {
-  props: ['title'],
+  props: ['item'],
   data() {
-    return {
-      completed: false,
-    }
+    return {}
+  },
+
+  computed: {
+    ...mapGetters(['todos']),
+  },
+
+  methods: {
+    ...mapMutations(['onItemDelete', 'changeCompleteById']),
   },
 }
 </script>

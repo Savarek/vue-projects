@@ -1,10 +1,6 @@
 <template>
   <section class="filter">
-    <select
-      v-model="selected"
-      :selected="selected.selected"
-      class="filter-select"
-    >
+    <select v-model="selected" class="filter-select">
       <option value="all" class="filter-select__option">All</option>
       <option value="completed" class="filter-select__option">Completed</option>
       <option value="uncompleted" class="filter-select__option">
@@ -15,11 +11,22 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
       selected: 'all',
     }
+  },
+
+  watch: {
+    selected(value) {
+      this.switchFilter(value)
+    },
+  },
+
+  methods: {
+    ...mapMutations(['switchFilter']),
   },
 }
 </script>

@@ -7,6 +7,7 @@
         <todo-search />
         <todo-filter />
       </div>
+      <todo-date />
     </div>
   </v-app>
 </template>
@@ -14,7 +15,9 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      time: '',
+    }
   },
 }
 </script>
