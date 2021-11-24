@@ -22,7 +22,6 @@ const todos = {
     onItemAdd(state, title) {
       state.todos.push({ id: Date.now(), title, completed: false })
     },
-
     onItemDelete(state, id) {
       state.todos = state.todos.filter((item) => item.id !== id)
     },
