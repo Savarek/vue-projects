@@ -2,7 +2,7 @@
   <nav class="nav">
     <nuxt-link to="/" class="nav-heading">Star-DB</nuxt-link>
     <div class="nav-items">
-      <nuxt-link to="/people" class="nav-item">Persons</nuxt-link>
+      <nuxt-link to="/characters" class="nav-item">Persons</nuxt-link>
       <nuxt-link to="/starships" class="nav-item">Starships</nuxt-link>
       <nuxt-link to="/planets" class="nav-item">Planets</nuxt-link>
     </div>

@@ -1,6 +1,7 @@
 <template>
   <section class="category">
     <item-list :category="data" />
+    <item-preview :category="data" />
   </section>
 </template>
 

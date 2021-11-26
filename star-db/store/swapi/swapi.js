@@ -3,6 +3,7 @@ const swapi = {
     items: [],
     currentCategory: 'home',
     currentPlanet: {},
+    currentItem: {},
     _apiBase: 'https://swapi.dev/api/',
     _apiPlanetBase: 'https://swapi.dev/api/planets/',
   },
@@ -17,6 +18,10 @@ const swapi = {
 
     setCurrentPlanet(state, currentPlanet) {
       state.currentPlanet = currentPlanet
+    },
+
+    setCurrentItem(state, item) {
+      state.currentItem = item
     },
   },
   actions: {
@@ -43,11 +48,24 @@ const swapi = {
 
       commit('setCurrentPlanet', data)
     },
+
+    async getItem({ commit, state }, param, id) {
+      const currentItem = await fetch(state._apiBase + param + '/' + id)
+
+      if (!currentItem.ok) {
+        console.log('Error')
+      }
+
+      const data = await currentItem.json()
+
+      commit('setCurrentItem', data)
+    },
   },
   getters: {
     data: (state) => state.items,
     category: (state) => state.currentCategory,
     planet: (state) => state.currentPlanet,
+    currentItem: (state) => state.currentItem,
   },
 }
 
