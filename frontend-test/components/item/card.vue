@@ -36,7 +36,7 @@
     <img :src="item.img" alt="photo" class="card-img" />
     <h1 class="card-name">{{ item.name }}</h1>
     <p class="card-description">{{ item.description }}</p>
-    <p class="card-price">{{ item.price }} руб&period;</p>
+    <p class="card-price">{{ item.price.toLocaleString() }} руб&period;</p>
   </div>
 </template>
 
@@ -59,6 +59,17 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
+@media screen and (max-width: 42.5rem)
+  .card
+    margin: 0 !important
+    max-width: 19.375rem !important
+
+    &-img
+      max-width: 19.375rem !important
+
+
+
 .card
   background: #FFFEFB
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02)
@@ -67,6 +78,11 @@ export default {
   margin-left: 1rem
   max-height: 27.375rem
   position: relative
+  cursor: pointer
+  transition: box-shadow .2s linear
+
+  &:hover
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25)
 
   &-delete
     background: #FF8484

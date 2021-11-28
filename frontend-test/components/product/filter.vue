@@ -7,11 +7,34 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   data() {
     return {
       selected: 'by-name',
     }
+  },
+
+  computed: {
+    ...mapGetters(['items']),
+  },
+  watch: {
+    selected(value) {
+      if (value === 'min-max') {
+        this.FILTER_ITEMS_MIN_MAX()
+      } else if (value === 'max-min') {
+        this.FILTER_ITEMS_MAX_MIN()
+      } else if (value === 'by-name') {
+        this.FILTER_ITEMS_BY_NAME()
+      }
+    },
+  },
+  methods: {
+    ...mapMutations([
+      'FILTER_ITEMS_MIN_MAX',
+      'FILTER_ITEMS_MAX_MIN',
+      'FILTER_ITEMS_BY_NAME',
+    ]),
   },
 }
 </script>
@@ -25,4 +48,5 @@ export default {
   padding: .75rem 0 .75rem 1rem
   color: #B4B4B4
   font-size: .75rem
+  outline: none
 </style>

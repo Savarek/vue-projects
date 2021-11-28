@@ -20,18 +20,22 @@
 body
   background: #F5F4F2
 
-.container
-  box-sizing: border-box
-  margin: 0 auto
-  padding: 2rem
-  max-width: 90rem
+@media screen and (max-width: 120rem)
+  .container
+    box-sizing: border-box
+    margin: 0 auto
+    padding: 2rem
+    max-width: 90rem
 
-.header
-  display: flex
-  justify-content: space-between
-  margin-bottom: 1rem
+  .header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 1rem
 
-.main
-  display: grid
-  grid-template-columns: 1fr 3fr
+  .main
+   display: flex
+
+@media screen and (max-width: 42.5rem)
+  .main
+    flex-direction: column
 </style>

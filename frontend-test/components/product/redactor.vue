@@ -70,7 +70,7 @@
         :disabled="$v.$invalid"
         @click.prevent="
           addItem({
-            price: price,
+            price: parseInt(price),
             img: img,
             name: name,
             description: description,
@@ -124,6 +124,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@media screen and (max-width: 90rem)
+  .redactor-submit
+    padding: .75rem 5.5rem !important
+
+@media screen and (max-width: 42.5rem)
+  .redactor-submit
+    padding: .75rem 5rem !important
+
 .submit
   background: #7BAE73 !important
   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1) !important
