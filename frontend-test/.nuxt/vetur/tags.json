@@ -1,0 +1,17 @@
+{
+  "Heading": {
+    "description": "Auto imported from components/heading.vue"
+  },
+  "ProductFilter": {
+    "description": "Auto imported from components/product/filter.vue"
+  },
+  "ProductRedactor": {
+    "description": "Auto imported from components/product/redactor.vue"
+  },
+  "ItemCard": {
+    "description": "Auto imported from components/item/card.vue"
+  },
+  "ItemList": {
+    "description": "Auto imported from components/item/list.vue"
+  }
+}
