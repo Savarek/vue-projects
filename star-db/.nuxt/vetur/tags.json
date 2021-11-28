@@ -1,0 +1,17 @@
+{
+  "HeaderNav": {
+    "description": "Auto imported from components/header/nav.vue"
+  },
+  "HeaderRandomPlanet": {
+    "description": "Auto imported from components/header/random-planet.vue"
+  },
+  "ItemInfo": {
+    "description": "Auto imported from components/item/info.vue"
+  },
+  "ItemList": {
+    "description": "Auto imported from components/item/list.vue"
+  },
+  "ItemPreview": {
+    "description": "Auto imported from components/item/preview.vue"
+  }
+}

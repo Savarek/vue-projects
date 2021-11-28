@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\LWTOX\\\\Documents\\\\GitHub\\\\vue-projects\\\\star-db\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3cbe819a"
+  },
+  {
+    "name": "category",
+    "path": "/:category",
+    "component": "C:\\\\Users\\\\LWTOX\\\\Documents\\\\GitHub\\\\vue-projects\\\\star-db\\\\pages\\\\_category.vue",
+    "chunkName": "pages/_category",
+    "_name": "_65c471a5"
+  }
+]
