@@ -1,8 +1,8 @@
 export { default as Heading } from '../..\\components\\heading.vue'
-export { default as ProductFilter } from '../..\\components\\product\\filter.vue'
-export { default as ProductRedactor } from '../..\\components\\product\\redactor.vue'
 export { default as ItemCard } from '../..\\components\\item\\card.vue'
 export { default as ItemList } from '../..\\components\\item\\list.vue'
+export { default as ProductFilter } from '../..\\components\\product\\filter.vue'
+export { default as ProductRedactor } from '../..\\components\\product\\redactor.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
